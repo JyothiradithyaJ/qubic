@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Task Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .glass {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .glow:hover {
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            transform: scale(1.02);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-[#0a0f1f] to-[#1f2b46] min-h-screen text-white p-10">
+
+    <h1 class="text-4xl font-bold mb-8">Task Dashboard</h1>
+
+    <div class="glass p-6 rounded-2xl mb-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <input id="title" placeholder="Task Title" class="p-3 rounded bg-gray-900 border border-gray-700">
+            <input id="deadline" placeholder="Deadline" class="p-3 rounded bg-gray-900 border border-gray-700">
+            <input id="priority" type="number" placeholder="Priority" class="p-3 rounded bg-gray-900 border border-gray-700">
+            <button onclick="addTask()" class="p-3 bg-cyan-500 rounded glow">Add Task</button>
+        </div>
+    </div>
+
+    <button onclick="loadTasks()" class="p-3 bg-green-500 rounded glow mb-5">Load Tasks</button>
+
+    <div id="taskList" class="grid grid-cols-1 gap-4"></div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

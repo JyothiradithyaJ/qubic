@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Productivity Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .glass {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glow:hover {
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+            transform: scale(1.02);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-[#0a0f1f] to-[#1f2b46] min-h-screen text-white">
+
+    <div class="max-w-3xl mx-auto py-20 text-center">
+        <h1 class="text-5xl font-bold mb-4">
+            Student AI Productivity Assistant
+        </h1>
+        <p class="text-gray-300 text-lg mb-10">
+            Smart scheduling • AI suggestions • Task automation
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <a href="dashboard.html"
+               class="glass p-8 rounded-2xl glow cursor-pointer text-xl font-semibold">
+                 Task Dashboard
+            </a>
+
+            <button onclick="getRecommendations()"
+                class="glass p-8 rounded-2xl glow cursor-pointer text-xl font-semibold">
+                 AI Recommendations
+            </button>
+
+        </div>
+
+        <div id="output"
+             class="glass mt-10 p-6 rounded-2xl hidden text-left"></div>
+
+    </div>
+
+    <script src="./script.js?reload=True"></script>
+
+</body>
+</html>
+
+
+

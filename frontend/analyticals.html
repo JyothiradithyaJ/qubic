@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Futuristic Analytics Dashboard</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .glow:hover {
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6),
+                        0 0 40px rgba(0, 255, 255, 0.4);
+            transform: scale(1.02);
+            transition: 0.25s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-[#05010a] to-[#0f1a2b] min-h-screen text-white p-8">
+
+    <h1 class="text-5xl font-extrabold mb-10 text-cyan-400 drop-shadow-lg">
+        🚀 Analytics Dashboard
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+        <div class="glass p-6 rounded-2xl glow">
+            <h2 class="text-2xl mb-3 font-semibold text-cyan-300">Study Time Trend</h2>
+            <canvas id="studyChart"></canvas>
+        </div>
+
+        <div class="glass p-6 rounded-2xl glow">
+            <h2 class="text-2xl mb-3 font-semibold text-orange-300">Screen Time Trend</h2>
+            <canvas id="screenChart"></canvas>
+        </div>
+
+        <div class="glass p-6 rounded-2xl glow md:col-span-2">
+            <h2 class="text-2xl mb-3 font-semibold text-purple-300">Activity Distribution</h2>
+            <canvas id="distChart"></canvas>
+        </div>
+
+    </div>
+
+    <!-- IMPORTANT: JS FILE (correct path) -->
+    <script src="./analyticals.js"></script>
+
+</body>
+</html>
+
